@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaring Lapangan - Beranda</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Pannellum -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/img/logo.png" alt="Jaring Lapangan Logo">
+                <h1>Jaring Lapangan</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html" class="active">Beranda</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero-section">
+        <div class="banner">
+            <img src="assets/img/banner.jpg" alt="Banner Utama">
+            <div class="banner-overlay"></div>
+            <div class="banner-content">
+                <h1 class="animate-fade-in">Jaring Lapangan Symphony</h1>
+                <p class="animate-fade-in">Solusi Terbaik untuk Fasilitas Olahraga Anda</p>
+                <div class="banner-buttons">
+                    <a href="#layanan" class="cta-button primary animate-fade-in">
+                        <i class="fas fa-search"></i> Jelajahi Sekarang
+                    </a>
+                    <a href="produk.html" class="cta-button secondary animate-fade-in">
+                        <i class="fas fa-shopping-cart"></i> Lihat Produk
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Statistik -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Proyek Selesai</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Klien Puas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Tahun Pengalaman</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">34</div>
+                    <div class="stat-label">Provinsi</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grafik Penjualan -->
+        <section class="sales-section">
+            <h2>Statistik Penjualan</h2>
+            <div class="chart-container">
+                <canvas id="salesChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Layanan -->
+        <section id="layanan" class="services-section">
+            <h2>Layanan Kami</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Instalasi</h3>
+                    <p>Tim profesional kami siap melakukan pemasangan di lokasi Anda</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛠️</div>
+                    <h3>Maintenance</h3>
+                    <p>Layanan perawatan berkala untuk menjaga kualitas jaring</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📏</div>
+                    <h3>Kustomisasi</h3>
+                    <p>Pembuatan jaring sesuai ukuran dan kebutuhan khusus</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial -->
+        <section class="testimonial-section">
+            <h2>Apa Kata Mereka?</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        "Kualitas jaringnya sangat bagus dan tahan lama. Sudah 2 tahun dipakai masih seperti baru!"
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Ahmad Sudrajat</strong>
+                        <span>Pengelola GOR Sentral</span>
+                    </div>
+                </div>
+                <!-- Testimonial lainnya akan ditambahkan via JavaScript -->
+            </div>
+            <div class="testimonial-dots"></div>
+        </section>
+
+        <!-- Showcase 360 Section -->
+        <section class="showcase-360">
+            <div class="container">
+                <h2 class="section-title">Galeri Proyek 360°</h2>
+                <p class="section-subtitle">Jelajahi hasil pengerjaan kami secara interaktif</p>
+                
+                <div class="showcase-grid">
+                    <!-- Proyek Futsal -->
+                    <div class="showcase-item">
+                        <div id="panorama-futsal" class="panorama-viewer"></div>
+                        <div class="showcase-info">
+                            <h3>Lapangan Futsal Premium</h3>
+                            <ul class="project-details">
+                                <li><i class="fas fa-ruler"></i> 20m x 40m</li>
+                                <li><i class="fas fa-layer-group"></i> PE HD Grade A</li>
+                                <li><i class="fas fa-map-marker-alt"></i> Jakarta Selatan</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Proyek Badminton -->
+                    <div class="showcase-item">
+                        <div id="panorama-badminton" class="panorama-viewer"></div>
+                        <div class="showcase-info">
+                            <h3>GOR Badminton Pro</h3>
+                            <ul class="project-details">
+                                <li><i class="fas fa-vector-square"></i> 4 Lapangan</li>
+                                <li><i class="fas fa-layer-group"></i> Nylon Pro</li>
+                                <li><i class="fas fa-map-marker-alt"></i> Tangerang</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Gallery Section -->
+        <section class="video-gallery">
+            <div class="container">
+                <h2 class="section-title">Galeri Video Proyek</h2>
+                <p class="section-subtitle">Lihat hasil pengerjaan kami dalam bentuk video</p>
+                
+                <div class="video-slider">
+                    <div class="video-container">
+                        <!-- Video Item 1 -->
+                        <div class="video-item">
+                            <div class="video-wrapper">
+                                <video controls poster="assets/img/thumbnails/video1.jpg">
+                                    <source src="assets/videos/project1.mp4" type="video/mp4">
+                                    Browser Anda tidak mendukung tag video.
+                                </video>
+                                <div class="video-info">
+                                    <h3>Instalasi Jaring Futsal</h3>
+                                    <p>GOR Sarana Sport - Jakarta</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Item 2 -->
+                        <div class="video-item">
+                            <div class="video-wrapper">
+                                <video controls poster="assets/img/thumbnails/video2.jpg">
+                                    <source src="assets/videos/project2.mp4" type="video/mp4">
+                                    Browser Anda tidak mendukung tag video.
+                                </video>
+                                <div class="video-info">
+                                    <h3>Pemasangan Jaring Badminton</h3>
+                                    <p>GOR Elite - Tangerang</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Item 3 -->
+                        <div class="video-item">
+                            <div class="video-wrapper">
+                                <video controls poster="assets/img/thumbnails/video3.jpg">
+                                    <source src="assets/videos/project3.mp4" type="video/mp4">
+                                    Browser Anda tidak mendukung tag video.
+                                </video>
+                                <div class="video-info">
+                                    <h3>Maintenance Jaring</h3>
+                                    <p>Lapangan Tennis - BSD</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <button class="nav-btn prev-btn">❮</button>
+                    <button class="nav-btn next-btn">❯</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+
+    <footer class="modern-footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Kontak</h3>
+                    <p>📱 +62 812-3456-7890</p>
+                    <p>📧 info@jaringlapangan.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Menu</h3>
+                    <div class="footer-links">
+                        <p><a href="#">Tentang Kami</a></p>
+                        <p><a href="#">Hubungi Kami</a></p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Ikuti Kami</h3>
+                    <div class="social-buttons">
+                        <a href="#" class="social-button facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            Facebook
+                        </a>
+                        <a href="#" class="social-button whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright">
+                    <p>&copy; 2024 Jaring Lapangan. Hak Cipta Dilindungi.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Kebijakan Privasi</a>
+                    <span class="separator">|</span>
+                    <a href="#">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <a href="https://wa.me/628xxxxxxxxxx" class="float-btn whatsapp" target="_blank">
+            <svg class="wa-icon" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span class="float-text">WhatsApp</span>
+        </a>
+        <a href="https://shopee.co.id/tokoanda" class="float-btn shopee" target="_blank">
+            <svg class="shopee-icon" viewBox="0 0 24 24">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10a9.982 9.982 0 01-3.804 7.85L12 16.23 5.804 19.85A9.982 9.982 0 012 12C2 6.477 6.477 2 12 2zm0 2c-2.987 0-5.51 1.909-6.404 4.575.35-.048.708-.075 1.071-.075 2.314 0 4.302 1.085 5.333 2.667 1.031-1.582 3.019-2.667 5.333-2.667.363 0 .721.027 1.071.075C17.51 5.909 14.987 4 12 4zm0 4c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3z"/>
+            </svg>
+            <span class="float-text">Shopee</span>
+        </a>
+        <a href="https://www.tokopedia.com/tokoanda" class="float-btn tokopedia" target="_blank">
+            <svg class="tokped-icon" viewBox="0 0 24 24">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 3c-2.235 0-4.185 1.121-5.354 2.832C7.185 6.879 9.765 6 12 6c2.235 0 4.815.879 5.354 1.832C16.185 6.121 14.235 5 12 5zm0 3c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3z"/>
+            </svg>
+            <span class="float-text">Tokopedia</span>
+        </a>
+    </div>
+
+    <script>
+        // Grafik Penjualan
+        const ctx = document.getElementById('salesChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Ags', 'Sep', 'Okt', 'Nov', 'Des'],
+                datasets: [{
+                    label: 'Penjualan 2024',
+                    data: [65, 59, 80, 81, 56, 55, 70, 85, 90, 92, 88, 95],
+                    fill: true,
+                    borderColor: '#2e7d32',
+                    backgroundColor: 'rgba(46, 125, 50, 0.1)',
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Grafik Penjualan Tahunan'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Testimonial Slider
+        const testimonials = [
+            {
+                content: "Kualitas jaringnya sangat bagus dan tahan lama. Sudah 2 tahun dipakai masih seperti baru!",
+                author: "Ahmad Sudrajat",
+                role: "Pengelola GOR Sentral"
+            },
+            {
+                content: "Pelayanan sangat profesional, pengerjaan cepat dan hasilnya memuaskan.",
+                author: "Siti Aminah",
+                role: "Pemilik Lapangan Futsal"
+            },
+            {
+                content: "Harga bersaing dengan kualitas terjamin. Recommended!",
+                author: "Budi Santoso",
+                role: "Pelatih Badminton"
+            }
+        ];
+
+        let currentTestimonial = 0;
+        const testimonialSlider = document.querySelector('.testimonial-slider');
+        const dotsContainer = document.querySelector('.testimonial-dots');
+
+        // Create dots
+        testimonials.forEach((_, index) => {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => showTestimonial(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        function showTestimonial(index) {
+            currentTestimonial = index;
+            updateTestimonial();
+        }
+
+        function updateTestimonial() {
+            const testimonial = testimonials[currentTestimonial];
+            testimonialSlider.innerHTML = `
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">${testimonial.content}</div>
+                    <div class="testimonial-author">
+                        <strong>${testimonial.author}</strong>
+                        <span>${testimonial.role}</span>
+                    </div>
+                </div>
+            `;
+
+            // Update dots
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentTestimonial);
+            });
+        }
+
+        // Auto slide
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            updateTestimonial();
+        }, 5000);
+    </script>
+<script src="assets/js/showcase.js"></script>
+</body>
+</html> 

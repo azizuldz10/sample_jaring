@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Jaring Lapangan</title>
+    <!-- Hapus style.css sementara untuk menghindari konflik -->
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    <link rel="stylesheet" href="assets/css/produk.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="decoration decoration-1"></div>
+    <div class="decoration decoration-2"></div>
+
+    <!-- Header yang sederhana -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/img/logo.png" alt="Jaring Lapangan Logo">
+                <h1>Naruto</h1>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="produk.html" class="active">Produk</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Container untuk produk -->
+    <div class="container">
+        <header class="page-header">
+            <h1 class="page-title">Produk Kami</h1>
+            <p>Pilihan jaring terbaik untuk lapangan olahraga Anda</p>
+        </header>
+
+        <div class="filter-section">
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="futsal">Futsal</button>
+                <button class="filter-btn" data-filter="badminton">Badminton</button>
+                <button class="filter-btn" data-filter="voli">Voli</button>
+                <button class="filter-btn" data-filter="tenis">Tenis</button>
+                <button class="filter-btn" data-filter="sepak bola">Sepak Bola</button>
+            </div>
+        </div>
+
+        <div class="products-container">
+            <!-- Product Grid -->
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image-wrapper">
+                    <div class="modal-image-slider">
+                        <div class="slider-container">
+                            <img src="" alt="" class="slider-image active" id="mainImage">
+                            <div class="slider-controls">
+                                <button class="slider-button prev" onclick="changeSlide(-1)">❮</button>
+                                <button class="slider-button next" onclick="changeSlide(1)">❯</button>
+                            </div>
+                        </div>
+                        <div class="thumbnail-container">
+                            <!-- Thumbnails akan diisi oleh JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-info">
+                    <!-- Konten modal lainnya -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="loading-animation">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <div class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Tambahkan console.log untuk debugging -->
+    <script>
+        console.log('HTML loaded');
+    </script>
+    <script src="assets/js/produk.js"></script>
+</body>
+</html> 
